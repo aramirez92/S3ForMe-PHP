@@ -26,4 +26,8 @@ if($s3->putObjectFile($imageName, $bucket , $uploadedImageName, S3::ACL_PUBLIC_R
 	echo '<b>S3 File URL:</b>'.$fileURL;
 }else{
 	echo 'Upload failed.';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b55a15519d0e48bb6339678eba332ead46aa749d

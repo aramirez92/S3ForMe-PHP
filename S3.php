@@ -663,4 +663,8 @@ final class S3Request {
 	}
 
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b55a15519d0e48bb6339678eba332ead46aa749d
