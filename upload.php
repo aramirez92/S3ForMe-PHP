@@ -4,7 +4,7 @@ if (!class_exists('S3'))require_once('S3.php');
 // Bucket Name
 $bucket="s3.dasi.plusdrive.net";
 			
-//AWS access info
+//S3ForMe access info
 if (!defined('s3ForMeAccessKey')) define('s3ForMeAccessKey', '99D79B06DCC8A7A54C1A67EB895A6281');
 if (!defined('s3ForMeSecretKey')) define('s3ForMeSecretKey', '496927fdea5ae4a30bdf25399073356261f62a2b');
 
