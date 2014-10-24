@@ -8,4 +8,4 @@ Visit <a href="http://www.ciber-adictos.com/2013/12/subir-archivos-a-s3forme-php
 
 *Example:*
 
-<img src="http://www.ciber-adictos.com/wp-content/uploads/2013/12/5zv6i1.jpg" />
+<img src="http://i.imgur.com/IqUxDJj.png" />
