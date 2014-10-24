@@ -630,7 +630,8 @@ final class S3Request {
 		if ($this->response->code == 200 && $this->fp !== false)
 			return fwrite($this->fp, $data);
 		else
-			$this->response->body .= $data;
+			if (!isset($this->response->body)) $this->response->body =  $data;
+    		else $this->response->body .= $data;
 		return strlen($data);
 	}
 
@@ -644,9 +645,9 @@ final class S3Request {
 	*/
 	private function __responseHeaderCallback(&$curl, &$data) {
 		if (($strlen = strlen($data)) <= 2) return $strlen;
-		if (substr($data, 0, 4) == 'HTTP')
+		if (substr($data, 0, 4) == 'HTTP'){
 			$this->response->code = (int)substr($data, 9, 3);
-		else {
+		} else {
 			list($header, $value) = explode(': ', trim($data));
 			if ($header == 'Last-Modified')
 				$this->response->headers['time'] = strtotime($value);
@@ -663,4 +664,3 @@ final class S3Request {
 	}
 
 }
-?>
